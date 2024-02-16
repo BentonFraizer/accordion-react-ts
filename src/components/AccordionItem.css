@@ -1,29 +1,7 @@
-.accordion-item {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid #ccc;
-}
-
-.accordion-item.active {
-  flex-grow: 1;
-  max-height: 421px;
-  transition: all 3s linear;
-}
-
-/*.accordion-item.active .accordion-item-container {*/
-/*  max-height: 421px;*/
-/*  transition: all 3s linear;*/
-/*}*/
-
-
-.accordion-item button[aria-expanded='true'] {
-  border-bottom: 1px solid blue;
-}
-
 button {
   position: relative;
   display: block;
-  text-align: left;
+  text-align: center;
   width: 100%;
   padding: 1em 0;
   color: black;
@@ -31,41 +9,21 @@ button {
   font-weight: 400;
   border: none;
   outline: none;
-  background-color: lightgreen;
+  background-color: #e7e7e7;
 }
 
-button:hover,
-button:focus {
-  cursor: pointer;
-  color: blue;
+.accordion-item:not(.active) .accordion-item-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s linear;
 }
 
-button:hover::after,
-button:focus::after {
-  cursor: pointer;
-  color: blue;
-  border: 1px solid blue;
+.accordion-item button {
+  border-bottom: 1px solid black;
 }
 
-.accordion-title {
-  padding: 1em 1.5em 1em 0;
-}
-
-button[aria-expanded='true'] {
-  color: blue;
-}
-
-button[aria-expanded='true'] + .accordion-item-container {
-  /*transition: height 200ms linear;*/
-  /*will-change: opacity, max-height;*/
-}
-
-.accordion-item-container {
-  /*transition: all 0.3s linear;*/
+.accordion-item.active .accordion-item-container {
+  height: 359px;
   overflow: auto;
-  transition: all 3s linear;
+  transition: height 0.3s linear;
 }
-
-/*.accordion-item-content {*/
-/*  max-height: 100%;*/
-/*}*/
