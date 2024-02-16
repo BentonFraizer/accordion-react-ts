@@ -1,0 +1,14 @@
+.accordion-wrapper {
+  border: 1px solid red;
+  height: 600px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /*overflow: hidden;*/
+}
